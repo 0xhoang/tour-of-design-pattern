@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestAbstractFactory(t *testing.T) {
+func TestFactoryMethod(t *testing.T) {
 	var app Application
 	app.initialize("road")
 
