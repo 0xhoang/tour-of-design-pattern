@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 type Logistics interface {
 	PlanDelivery() string
 	CreateTransport() Transport
@@ -74,18 +72,4 @@ func (a *Application) initialize(transport string) {
 	}
 
 	a.L = l
-}
-
-func main() {
-	var app Application
-	app.initialize("road")
-
-	fmt.Println("choose plan delivery: ", app.L.PlanDelivery())
-	transport1 := app.L.CreateTransport()
-	fmt.Println("choose delivery method: ", transport1.Delivery())
-
-	app.initialize("sea")
-	fmt.Println("choose plan delivery: ", app.L.PlanDelivery())
-	transport2 := app.L.CreateTransport()
-	fmt.Println("choose delivery method: ", transport2.Delivery())
 }

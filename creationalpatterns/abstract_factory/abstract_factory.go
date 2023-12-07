@@ -116,17 +116,3 @@ func (a *ApplicationBuilder) Build(types string) Application {
 
 	return app
 }
-
-func main() {
-	builder := &ApplicationBuilder{}
-	app := builder.Build("victorian")
-	chair := app.CreateChair()
-
-	fmt.Println(chair.HasLegs())
-	fmt.Println(chair.SitOn())
-
-	app1 := builder.Build("modern")
-	chair1 := app1.CreateChair()
-	fmt.Println(chair1.HasLegs())
-	fmt.Println(chair1.SitOn())
-}
